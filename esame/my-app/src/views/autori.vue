@@ -95,7 +95,7 @@ onMounted(async () => {
     <hr class="my-5">
 
     <!-- COPERTINE OPERE -->
-    <section class="other-works mb-5">hub
+    <section class="other-works mb-5">
       <h3 class="mb-4 text-center">Altre opere di {{ autore.name }}</h3>
       <div class="row">
         <div v-for="opera in opere" :key="opera.key" class="col-md-3 col-6 mb-4">
