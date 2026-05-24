@@ -73,10 +73,10 @@ onMounted(async () => {
         <h1 class="display-4 fw-bold">{{ autore.name }}</h1>
         
         <div class="info-meta mb-4">
-          <span v-if="autore.birth_date" class="badge border me-2" style="background-color: #6c757d;">
+          <span v-if="autore.birth_date" class="badge border me-2" style="background-color: var(--panna); color: var(--blu-notte);">
             Birth: {{ autore.birth_date }}
           </span>
-          <span v-if="autore.death_date" class="badge border" style="background-color: #6c757d;">
+          <span v-if="autore.death_date" class="badge border" style="background-color: var(--panna); color: var(--blu-notte);">
             Death: {{ autore.death_date }}
           </span>
         </div>
