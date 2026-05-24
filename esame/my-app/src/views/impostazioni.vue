@@ -35,7 +35,7 @@ const toggleTheme = async () => {
   if (user) {
     try {
       await setDoc(doc(db, "utenti", user.uid), { theme: themeMode.value, updatedAt: new Date() }, { merge: true });
-    } catch (e) { console.error("Errore tema:", e); }
+    } catch (e) { console.error("Theme error:", e); }
   }
 };
 
@@ -51,7 +51,7 @@ onMounted(() => {
         if (userDoc.exists() && userDoc.data().theme) {
           themeMode.value = userDoc.data().theme;
         }
-      } catch (e) { console.error("Errore recupero tema:", e); }
+      } catch (e) { console.error("Recovery error theme:", e); }
     } else {
       router.push("/");
     }
@@ -75,7 +75,7 @@ const updateAccount = async () => {
     setTimeout(() => { saveMessage.value = ""; router.push("/lettore"); }, 1500);
   } catch (e) {
     isError.value = true; 
-    saveMessage.value = "Errore: " + e.message; 
+    saveMessage.value = "Error: " + e.message; 
   }
 };
 
